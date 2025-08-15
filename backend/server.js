@@ -7,7 +7,7 @@ app.use(cors());
 app.use(express.json());
 
 
-const OPENROUTER_API_KEY = process.env.OPENROUTER_API_KEY;
+const OPENROUTER_API_KEY = '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'; // Replace with your OpenRouter API key
 
 app.post('/api/explain', async (req, res) => {
   const { prompt } = req.body;
