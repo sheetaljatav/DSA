@@ -1,0 +1,147 @@
+Page Layout
+.time-container {
+  background-color: #f8fafc;
+  font-family: 'Inter', sans-serif;
+  color: #111827;
+  padding: 32px 16px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Content Area */
+.time-section {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+  margin: auto;
+  max-width: 700px;
+  width: 100%;
+}
+
+/* Headings */
+.time-section h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 24px;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 10px;
+}
+
+.time-section h3 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #1d4ed8;
+  margin-top: 32px;
+  margin-bottom: 14px;
+  border-bottom: 1px dashed #cbd5e1;
+  padding-bottom: 6px;
+}
+
+/* Paragraph & Lists */
+.time-section p,
+.time-section ul,
+.time-section li {
+  font-size: 1rem;
+  color: #374151;
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+
+/* Lists */
+.time-section ul {
+  padding-left: 20px;
+}
+.time-section ul li {
+  list-style-type: disc;
+}
+
+/* Ordered Lists */
+.time-section ol {
+  padding-left: 20px;
+}
+.time-section ol li {
+  list-style-type: decimal;
+}
+
+/* Inline Code */
+.time-section code {
+  background-color: #e2e8f0;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: 'Fira Code', monospace;
+  font-size: 0.95rem;
+}
+
+/* Code Block */
+.time-section pre {
+  background: #0f172a;
+  color: #e2e8f0;
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-family: 'Fira Code', monospace;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  margin: 14px 0;
+  border-left: 3px solid #3b82f6;
+  overflow-x: auto;
+  max-width: 600px;
+  width: 100%;
+}
+
+/* Optional scrollbar for code */
+.time-section pre::-webkit-scrollbar {
+  height: 6px;
+}
+.time-section pre::-webkit-scrollbar-thumb {
+  background: #3b82f6;
+  border-radius: 8px;
+}
+
+/* Table Styling */
+.time-section table {
+  width: auto;
+  min-width: 320px;
+  max-width: 600px;
+  border-collapse: collapse;
+  margin: 14px 0;
+  font-size: 0.92rem;
+}
+.time-section th,
+.time-section td {
+  border: 1px solid #e2e8f0;
+  padding: 7px 10px;
+  text-align: left;
+}
+.time-section th {
+  background-color: #f1f5f9;
+  color: #1e293b;
+  font-weight: 600;
+}
+.time-section td {
+  background-color: #ffffff;
+}
+
+/* Hover Highlight */
+.time-section tr:hover td {
+  background-color: #f0f9ff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .time-container {
+    padding: 12px;
+  }
+
+  .time-section {
+    padding: 12px;
+  }
+  .time-section pre,
+  .time-section table {
+    max-width: 100vw;
+    min-width: 0;
+    font-size: 0.85rem;
+  }
+}

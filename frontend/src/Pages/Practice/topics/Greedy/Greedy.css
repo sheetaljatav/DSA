@@ -1,0 +1,27 @@
+/* LeetCode-style table enhancements */
+.bubble-sort-section table {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.06);
+}
+
+.bubble-sort-section th,
+.bubble-sort-section td {
+  vertical-align: middle;
+}
+
+.bubble-sort-section th {
+  font-size: 1rem;
+  letter-spacing: 0.02em;
+}
+
+.bubble-sort-section a {
+  color: #3b82f6;
+  text-decoration: underline;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.bubble-sort-section a:hover {
+  color: #1d4ed8;
+}
