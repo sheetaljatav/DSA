@@ -36,7 +36,7 @@ const Chatbot = forwardRef((props, ref) => {
     setLoading(true);
     try {
       // Use a relative path for API endpoint
-      const res = await fetch('https://dsa-6c8n.onrender.com/api/explain', {
+      const res = await fetch('https://dsa-x51m.onrender.com/api/explain', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ prompt: input })
