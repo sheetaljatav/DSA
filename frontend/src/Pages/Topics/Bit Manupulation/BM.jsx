@@ -3,8 +3,8 @@ import "./BM.css";
 
 const BM = () => {
   return (
-    <div className="queue-container">
-      <section className="queue-section">
+    <div className="bm-container">
+      <section className="bm-section">
         <h2>🧠 What is Bit Manipulation?</h2>
         <p>
           Bit Manipulation refers to the process of performing operations directly on the binary representation of integers. These operations are very fast, memory-efficient, and are commonly used in competitive programming and system-level coding.

@@ -2,7 +2,7 @@
 .stack-container {
   min-height: 100vh;
   font-family: 'Inter', sans-serif;
-  background-color: #f8fafc;
+  background-color: var(--bg-primary);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -11,14 +11,13 @@
 
 /* Content Area */
 .stack-section {
-  background-color: #ffffff;
+  background-color: var(--bg-secondary);
   border-radius: 12px;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
   margin: auto;
   max-width: 700px;
   width: 100%;
   padding: 40px 48px;
-  background-color: #fdfdfd;
   overflow-y: auto;
 }
 
@@ -26,9 +25,9 @@
 .stack-section h2 {
   font-size: 2.2rem;
   font-weight: 700;
-  color: #0f172a;
+  color: var(--text-primary);
   margin-bottom: 24px;
-  border-bottom: 2px solid #e2e8f0;
+  border-bottom: 2px solid var(--border-color);
   padding-bottom: 10px;
 }
 
@@ -37,15 +36,15 @@
   font-weight: 600;
   margin-top: 32px;
   margin-bottom: 14px;
-  color: #1d4ed8;
-  border-bottom: 1px dashed #cbd5e1;
+  color: var(--accent-color);
+  border-bottom: 1px dashed var(--border-color);
   padding-bottom: 6px;
 }
 
 .stack-section h4 {
   font-size: 1.2rem;
   font-weight: 600;
-  color: #1e293b;
+  color: var(--text-primary);
   margin: 20px 0 10px;
 }
 
@@ -54,7 +53,7 @@
 .stack-section ul,
 .stack-section li {
   font-size: 1rem;
-  color: #374151;
+  color: var(--text-primary);
   line-height: 1.7;
   margin-bottom: 12px;
 }
@@ -70,15 +69,15 @@
 
 /* Code Block */
 .stack-section pre {
-  background: #0f172a;
-  color: #e2e8f0;
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
   padding: 18px 20px;
   border-radius: 10px;
   font-family: 'Fira Code', monospace;
   font-size: 0.95rem;
   line-height: 1.6;
   margin: 20px 0;
-  border-left: 4px solid #3b82f6;
+  border-left: 4px solid var(--accent-color);
   overflow-x: auto;
 }
 
@@ -87,7 +86,7 @@
   height: 6px;
 }
 .stack-section pre::-webkit-scrollbar-thumb {
-  background: #3b82f6;
+  background: var(--accent-color);
   border-radius: 8px;
 }
 
@@ -101,25 +100,25 @@
 
 .stack-section th,
 .stack-section td {
-  border: 1px solid #e2e8f0;
+  border: 1px solid var(--border-color);
   padding: 10px 12px;
   text-align: left;
-  color: #374151;
+  color: var(--text-primary);
 }
 
 .stack-section th {
-  background-color: #f1f5f9;
-  color: #1e293b;
+  background-color: var(--bg-tertiary);
+  color: var(--text-primary);
   font-weight: 600;
 }
 
 .stack-section td {
-  background-color: #ffffff;
+  background-color: var(--bg-secondary);
 }
 
 /* Highlighted rows */
 .stack-section tr:hover td {
-  background-color: #f0f9ff;
+  background-color: var(--bg-tertiary);
 }
 
 /* Responsive Layout */

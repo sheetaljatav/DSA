@@ -1,16 +1,17 @@
 .register-container {
   max-width: 400px;
   margin: 80px auto;
-  background: #fff;
+  background: var(--bg-primary);
   border-radius: 12px;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.07);
+  box-shadow: var(--shadow);
   padding: 36px 32px 28px 32px;
   font-family: 'Inter', sans-serif;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .register-container h2 {
   text-align: center;
-  color: #1d4ed8;
+  color: var(--accent-color);
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 28px;
@@ -25,22 +26,27 @@
 
 .register-form input {
   padding: 12px 14px;
-  border: 1px solid #cbd5e1;
+  border: 1px solid var(--border-color);
   border-radius: 7px;
   font-size: 1rem;
-  background: #f8fafc;
-  transition: border 0.2s;
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  transition: border 0.2s, background-color 0.3s ease, color 0.3s ease;
 }
 
 .register-form input:focus {
-  border: 1.5px solid #3b82f6;
+  border: 1.5px solid var(--accent-color);
   outline: none;
-  background: #fff;
+  background: var(--bg-primary);
+}
+
+.register-form input::placeholder {
+  color: var(--text-muted);
 }
 
 .register-form button {
   padding: 12px 0;
-  background: #2563eb;
+  background: var(--accent-color);
   color: #fff;
   font-size: 1.1rem;
   font-weight: 600;
@@ -52,11 +58,12 @@
 }
 
 .register-form button:hover {
-  background: #1d4ed8;
+  background: var(--accent-hover);
 }
 
 .register-container p {
   text-align: center;
   font-size: 1rem;
   margin-top: 10px;
+  color: var(--text-secondary);
 }

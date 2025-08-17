@@ -3,11 +3,10 @@ import { Link, useNavigate } from 'react-router-dom';
 import { FaHome, FaBars, FaTimes, FaUserCircle, FaSun, FaMoon } from 'react-icons/fa';
 import './Navbar.css';
 
-const Navbar = ({ user, setUser }) => {
+const Navbar = ({ user, setUser, theme, setTheme }) => {
   const [showTopics, setShowTopics] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [showUserDropdown, setShowUserDropdown] = useState(false);
-  const [theme, setTheme] = useState('dark');
   const userDropdownRef = useRef(null);
   const navigate = useNavigate();
 
@@ -28,11 +27,6 @@ const Navbar = ({ user, setUser }) => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
   }, [showUserDropdown]);
-
-  // Apply theme to body
-  useEffect(() => {
-    document.body.setAttribute('data-theme', theme);
-  }, [theme]);
 
   const handleLogout = () => {
     localStorage.removeItem('loggedInUser'); // FIXED: was incorrectly removing 'user'

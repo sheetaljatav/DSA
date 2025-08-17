@@ -1,39 +1,37 @@
 /* Page Layout */
 .bubble-sort-container {
-  
-  background-color: #f8fafc;
+  background-color: var(--bg-primary);
   font-family: 'Inter', sans-serif;
-  color: #111827;
-  
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Content Area */
 .bubble-sort-section {
-  background-color: #ffffff;
-  
+  background-color: var(--bg-secondary);
   border-radius: 12px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
-  
+  box-shadow: var(--shadow);
   margin: auto;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* Headings */
 .bubble-sort-section h2 {
   font-size: 2.2rem;
   font-weight: 700;
-  color: #0f172a;
+  color: var(--text-primary);
   margin-bottom: 24px;
-  border-bottom: 2px solid #e2e8f0;
+  border-bottom: 2px solid var(--border-color);
   padding-bottom: 10px;
 }
 
 .bubble-sort-section h3 {
   font-size: 1.6rem;
   font-weight: 600;
-  color: #1d4ed8;
+  color: var(--accent-color);
   margin-top: 32px;
   margin-bottom: 14px;
-  border-bottom: 1px dashed #cbd5e1;
+  border-bottom: 1px dashed var(--border-color);
   padding-bottom: 6px;
 }
 
@@ -42,7 +40,7 @@
 .bubble-sort-section ul,
 .bubble-sort-section li {
   font-size: 1rem;
-  color: #374151;
+  color: var(--text-primary);
   line-height: 1.7;
   margin-bottom: 12px;
 }
@@ -65,7 +63,8 @@
 
 /* Inline Code */
 .bubble-sort-section code {
-  background-color: #e2e8f0;
+  background-color: var(--bg-tertiary);
+  color: var(--text-primary);
   padding: 2px 6px;
   border-radius: 4px;
   font-family: 'Fira Code', monospace;
@@ -82,7 +81,7 @@
   font-size: 0.95rem;
   line-height: 1.6;
   margin: 20px 0;
-  border-left: 4px solid #3b82f6;
+  border-left: 4px solid var(--accent-color);
   overflow-x: auto;
 }
 
@@ -91,7 +90,7 @@
   height: 6px;
 }
 .bubble-sort-section pre::-webkit-scrollbar-thumb {
-  background: #3b82f6;
+  background: var(--accent-color);
   border-radius: 8px;
 }
 
@@ -104,22 +103,23 @@
 }
 .bubble-sort-section th,
 .bubble-sort-section td {
-  border: 1px solid #e2e8f0;
+  border: 1px solid var(--border-color);
   padding: 10px 12px;
   text-align: left;
 }
 .bubble-sort-section th {
-  background-color: #f1f5f9;
-  color: #1e293b;
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
   font-weight: 600;
 }
 .bubble-sort-section td {
-  background-color: #ffffff;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
 }
 
 /* Hover Highlight */
 .bubble-sort-section tr:hover td {
-  background-color: #f0f9ff;
+  background-color: var(--bg-tertiary);
 }
 
 /* Responsive Design */

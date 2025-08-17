@@ -7,11 +7,13 @@ app.use(cors());
 app.use(express.json());
 
 
-const OPENROUTER_API_KEY = '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'; // Replace with your OpenRouter API key
+//const OPENROUTER_API_KEY = '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'; // Replace with your OpenRouter API key
 
+const OPENROUTER_API_KEY = process.env.OPENROUTER_API_KEY;
 app.post('/api/explain', async (req, res) => {
   const { prompt } = req.body;
   if (!prompt) return res.status(400).json({ error: 'No prompt provided' });
+  if (!OPENROUTER_API_KEY) return res.status(500).json({ error: 'OpenRouter API key is not set' });
 
   try {
     const openrouterRes = await fetch('https://openrouter.ai/api/v1/chat/completions', {

@@ -7,26 +7,28 @@
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #f8f9fa;
-  color: #333;
+  background: var(--bg-primary);
+  color: var(--text-primary);
   line-height: 1.6;
   padding: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Container styling */
 .container {
   max-width: 900px;
   margin: auto;
-  background-color: #ffffff;
+  background-color: var(--bg-secondary);
   padding: 30px;
   border-radius: 16px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  box-shadow: var(--shadow);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* Headings */
 .container h1 {
   font-size: 2.5rem;
-  color: #2c3e50;
+  color: var(--text-primary);
   margin-bottom: 20px;
   font-weight: 700;
   text-align: center;
@@ -34,9 +36,9 @@ body {
 
 .container h2 {
   font-size: 1.75rem;
-  color: #1d3557;
+  color: var(--accent-color);
   margin: 30px 0 10px;
-  border-bottom: 2px solid #dee2e6;
+  border-bottom: 2px solid var(--border-color);
   padding-bottom: 6px;
 }
 
@@ -44,12 +46,12 @@ body {
 .container p {
   font-size: 1.1rem;
   margin-bottom: 15px;
-  color: #555;
+  color: var(--text-primary);
 }
 
 /* Links */
 a {
-  color: #0077cc;
+  color: var(--accent-color);
   text-decoration: none;
   font-weight: 600;
 }
@@ -63,7 +65,7 @@ a:hover {
   display: inline-block;
   margin-top: 20px;
   padding: 12px 22px;
-  background-color: #1d3557;
+  background-color: var(--accent-color);
   color: #fff;
   border: none;
   border-radius: 8px;
@@ -73,16 +75,17 @@ a:hover {
 }
 
 .button:hover {
-  background-color: #457b9d;
+  background-color: var(--accent-hover);
 }
 
 /* Section layout */
 .section {
   margin-top: 40px;
   padding: 20px;
-  border-left: 5px solid #1d3557;
-  background-color: #f1f3f5;
+  border-left: 5px solid var(--accent-color);
+  background-color: var(--bg-tertiary);
   border-radius: 8px;
+  transition: background-color 0.3s ease;
 }
 
 /* Responsive */

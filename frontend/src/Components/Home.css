@@ -1,9 +1,10 @@
 /* Home Page Styles */
 .home {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #f0f8ff 0%, #f9f9f9 100%);
-  color: #222;
+  background: var(--bg-primary);
+  color: var(--text-primary);
   min-height: 100vh;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* HERO SECTION */
@@ -93,15 +94,16 @@
 /* FEATURES SECTION */
 .features {
   padding: 70px 20px 60px 20px;
-  background: linear-gradient(90deg, #f8fafc 60%, #e0f7fa 100%);
+  background: var(--bg-secondary);
   text-align: center;
+  transition: background-color 0.3s ease;
 }
 
 .features h2 {
   font-size: 2.2rem;
   margin-bottom: 36px;
   font-weight: 700;
-  color: #142a41;
+  color: var(--text-primary);
   letter-spacing: 0.5px;
 }
 
@@ -115,38 +117,40 @@
 
 .feature-box {
   padding: 28px 18px;
-  background: linear-gradient(120deg, #e3f2fd 0%, #f1f8e9 100%);
+  background: var(--bg-tertiary);
   border-radius: 14px;
   font-size: 1.18rem;
   font-weight: 500;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
-  transition: transform 0.2s, box-shadow 0.2s;
-  border: 1.5px solid #b3e5fc;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s, box-shadow 0.2s, background-color 0.3s ease;
+  border: 1.5px solid var(--border-color);
+  color: var(--text-primary);
 }
 
 .feature-box:hover {
   transform: translateY(-8px) scale(1.04);
   box-shadow: 0 6px 24px rgba(0,123,255,0.10);
-  background: linear-gradient(120deg, #bbdefb 0%, #e0f2f1 100%);
+  background: var(--bg-secondary);
 }
 
 /* TOPICS SECTION */
 .topics {
   padding: 0 20px 0 20px;
-  background: linear-gradient(90deg, #f0f8ff 60%, #e3f2fd 100%);
+  background: var(--bg-primary);
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
   box-sizing: border-box;
+  transition: background-color 0.3s ease;
 }
 
 .topics h2 {
   font-size: 2.1rem;
   margin: 34px 0 24px 0;
   font-weight: 700;
-  color: #12263c;
+  color: var(--text-primary);
 }
 
 .topics-grid {
@@ -159,24 +163,24 @@
 }
 
 .topic-card {
-  background: linear-gradient(120deg, #ffffff 60%, #e3f2fd 100%);
+  background: var(--bg-secondary);
   border-radius: 12px;
   padding: 28px 0;
   font-size: 1.18rem;
-  color: #173250;
+  color: var(--text-primary);
   font-weight: 600;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-  transition: transform 0.2s, background 0.2s, color 0.2s;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s, background 0.3s ease, color 0.3s ease;
   cursor: pointer;
   text-decoration: none;
-  border: 1.5px solid #b3e5fc;
+  border: 1.5px solid var(--border-color);
   letter-spacing: 0.5px;
 }
 
 .topic-card:hover {
   transform: translateY(-7px) scale(1.04);
-  background: linear-gradient(120deg, #e3f2fd 0%, #bbdefb 100%);
-  color: #112336;
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
   box-shadow: 0 6px 24px rgba(0,123,255,0.10);
 }
 
@@ -193,15 +197,17 @@
 }
 
 .quote-modal-content {
-  background: #fff;
+  background: var(--bg-primary);
   border-radius: 16px;
   padding: 32px 28px 24px 28px;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  box-shadow: var(--shadow);
   max-width: 90vw;
   width: 350px;
   text-align: center;
   position: relative;
   animation: popIn 0.4s;
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 @keyframes popIn {
@@ -214,7 +220,7 @@
   top: 12px;
   right: 18px;
   font-size: 1.7rem;
-  color: #0a1f36;
+  color: var(--text-primary);
   cursor: pointer;
   font-weight: bold;
   transition: color 0.2s;
@@ -226,14 +232,14 @@
 
 .quote-modal-content h3 {
   margin-bottom: 14px;
-  color: #0d243d;
+  color: var(--text-primary);
   font-size: 1.25rem;
   font-weight: 700;
 }
 
 .quote-modal-content p {
   font-size: 1.08rem;
-  color: #333;
+  color: var(--text-secondary);
   font-style: italic;
 }
 

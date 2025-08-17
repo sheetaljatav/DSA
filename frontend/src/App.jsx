@@ -69,6 +69,7 @@ import SearchingSortingPractice from './Pages/Practice/topics/Searching & Sortin
 function App() {
   const [user, setUser] = useState(null);
   const [showAuth, setShowAuth] = useState(false);
+  const [theme, setTheme] = useState('light'); // Start with light theme
   const chatbotRef = React.useRef();
 
   // Load user from localStorage if logged in
@@ -79,6 +80,16 @@ function App() {
     }
   }, []);
 
+
+  useEffect(() => {
+    document.body.setAttribute('data-theme', theme);
+    if (theme === 'dark') {
+      document.body.classList.add('dark');
+    } else {
+      document.body.classList.remove('dark');
+    }
+  }, [theme]);
+
   const handleExplain = (selectedText) => {
     if (window.dispatchEvent) {
       window.dispatchEvent(new CustomEvent('ai-explain', { detail: selectedText }));
@@ -88,64 +99,64 @@ function App() {
   return (
     <Router>
       {/* ✅ Fixed: setUser now passed to Navbar */}
-      <Navbar user={user} setUser={setUser} onAuthClick={() => setShowAuth(true)} />
+      <Navbar user={user} setUser={setUser} onAuthClick={() => setShowAuth(true)} theme={theme} setTheme={setTheme} />
 
       <Routes>
-        <Route path="/" element={<Home user={user} />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/login" element={<Login setUser={setUser} />} />
+        <Route path="/" element={<Home user={user} theme={theme} />} />
+        <Route path="/register" element={<Register theme={theme} />} />
+        <Route path="/login" element={<Login setUser={setUser} theme={theme} />} />
 
         {/* Practice Section */}
-        <Route path="/practice" element={<Practice />} />
-        <Route path="/practice/Arrays-Practice" element={<ArraysPractice />} />
-        <Route path="/practice/2DArrays-Practice" element={<TwoDArraysPractice />} />
-        <Route path="/practice/BackTracking-Practice" element={<BackTrackingPractice />} />
-        <Route path="/practice/BinaryTrees-Practice" element={<BinaryTreesPractice />} />
-        <Route path="/practice/Bit Manupulation-Practice" element={<BitManupulationPractice />} />
-        <Route path="/practice/Dynamic Programming-Practice" element={<DPPractice />} />
-        <Route path="/practice/Graph-Practice" element={<GraphPractice />} />
-        <Route path="/practice/Greedy-Practice" element={<GreedyPractice />} />
-        <Route path="/practice/Heaps & Hashing-Practice" element={<HHPractice />} />
-        <Route path="/practice/LinkedList-Practice" element={<LinkedListPractice />} />
-        <Route path="/practice/Queues-Practice" element={<QueuesPractice />} />
-        <Route path="/practice/Stacks-Practice" element={<StacksPractice />} />
-        <Route path="/practice/Strings-Practice" element={<StringsPractice />} />
-        <Route path="/practice/Tries-Practice" element={<TriesPractice />} />
-        <Route path="/practice/Searching & Sorting -Practice" element={<SearchingSortingPractice />} />
+        <Route path="/practice" element={<Practice theme={theme} />} />
+        <Route path="/practice/Arrays-Practice" element={<ArraysPractice theme={theme} />} />
+        <Route path="/practice/2DArrays-Practice" element={<TwoDArraysPractice theme={theme} />} />
+        <Route path="/practice/BackTracking-Practice" element={<BackTrackingPractice theme={theme} />} />
+        <Route path="/practice/BinaryTrees-Practice" element={<BinaryTreesPractice theme={theme} />} />
+        <Route path="/practice/Bit Manupulation-Practice" element={<BitManupulationPractice theme={theme} />} />
+        <Route path="/practice/Dynamic Programming-Practice" element={<DPPractice theme={theme} />} />
+        <Route path="/practice/Graph-Practice" element={<GraphPractice theme={theme} />} />
+        <Route path="/practice/Greedy-Practice" element={<GreedyPractice theme={theme} />} />
+        <Route path="/practice/Heaps & Hashing-Practice" element={<HHPractice theme={theme} />} />
+        <Route path="/practice/LinkedList-Practice" element={<LinkedListPractice theme={theme} />} />
+        <Route path="/practice/Queues-Practice" element={<QueuesPractice theme={theme} />} />
+        <Route path="/practice/Stacks-Practice" element={<StacksPractice theme={theme} />} />
+        <Route path="/practice/Strings-Practice" element={<StringsPractice theme={theme} />} />
+        <Route path="/practice/Tries-Practice" element={<TriesPractice theme={theme} />} />
+        <Route path="/practice/Searching & Sorting -Practice" element={<SearchingSortingPractice theme={theme} />} />
 
         {/* Topic Pages */}
-        <Route path="/topics/arrays" element={<Arrays />} />
-        <Route path="/topics/arrays/Bubble-Sort" element={<BubbleSort />} />
-        <Route path="/topics/arrays/Selection-Sort" element={<SelectionSort />} />
-        <Route path="/topics/arrays/Insertion-Sort" element={<InsertionSort />} />
-        <Route path="/topics/arrays/Quick-Sort" element={<QuickSort />} />
-        <Route path="/topics/arrays/Counting-Sort" element={<CountingSort />} />
-        <Route path="/topics/arrays/Radix-Sort" element={<RadixSort />} />
-        <Route path="/topics/arrays/Merge-Sort" element={<MergeSort />} />
-        <Route path="/topics/arrays/Linear-Search" element={<LinearSearch />} />
-        <Route path="/topics/arrays/Binary-Search" element={<BinarySearch />} />
+        <Route path="/topics/arrays" element={<Arrays theme={theme} />} />
+        <Route path="/topics/arrays/Bubble-Sort" element={<BubbleSort theme={theme} />} />
+        <Route path="/topics/arrays/Selection-Sort" element={<SelectionSort theme={theme} />} />
+        <Route path="/topics/arrays/Insertion-Sort" element={<InsertionSort theme={theme} />} />
+        <Route path="/topics/arrays/Quick-Sort" element={<QuickSort theme={theme} />} />
+        <Route path="/topics/arrays/Counting-Sort" element={<CountingSort theme={theme} />} />
+        <Route path="/topics/arrays/Radix-Sort" element={<RadixSort theme={theme} />} />
+        <Route path="/topics/arrays/Merge-Sort" element={<MergeSort theme={theme} />} />
+        <Route path="/topics/arrays/Linear-Search" element={<LinearSearch theme={theme} />} />
+        <Route path="/topics/arrays/Binary-Search" element={<BinarySearch theme={theme} />} />
 
-        <Route path="/topics/stacks" element={<Stack />} />
-        <Route path="/topics/linkedlist" element={<List />} />
-        <Route path="/topics/greedy" element={<Greedy />} />
-        <Route path="/topics/pointers" element={<Pointers />} />
-        <Route path="/topics/two-pointers" element={<TwoPointers />} />
-        <Route path="/topics/trees" element={<Trees />} />
-        <Route path="/topics/graphs" element={<Graphs />} />
-        <Route path="/topics/backtracking" element={<BackTracking />} />
-        <Route path="/topics/shortest-path" element={<SP />} />
-        <Route path="/topics/bit-manupulation" element={<BM />} />
-        <Route path="/topics/dp" element={<DP />} />
-        <Route path="/topics/minimum-spanning" element={<MS />} />
-        <Route path="/topics/oops" element={<OOPS />} />
-        <Route path="/topics/2d-arrays" element={<TwoDArrays />} />
-        <Route path="/topics/queues" element={<Queues />} />
-        <Route path="/topics/hashtables" element={<Hash />} />
-        <Route path="/topics/ObjectOrientedProgramming" element={<OOPS />} />
-        <Route path="/topics/time-complexity" element={<Time />} />
-        <Route path="/topics/maximum-flow" element={<MF />} />
+        <Route path="/topics/stacks" element={<Stack theme={theme} />} />
+        <Route path="/topics/linkedlist" element={<List theme={theme} />} />
+        <Route path="/topics/greedy" element={<Greedy theme={theme} />} />
+        <Route path="/topics/pointers" element={<Pointers theme={theme} />} />
+        <Route path="/topics/two-pointers" element={<TwoPointers theme={theme} />} />
+        <Route path="/topics/trees" element={<Trees theme={theme} />} />
+        <Route path="/topics/graphs" element={<Graphs theme={theme} />} />
+        <Route path="/topics/backtracking" element={<BackTracking theme={theme} />} />
+        <Route path="/topics/shortest-path" element={<SP theme={theme} />} />
+        <Route path="/topics/bit-manupulation" element={<BM theme={theme} />} />
+        <Route path="/topics/dp" element={<DP theme={theme} />} />
+        <Route path="/topics/minimum-spanning" element={<MS theme={theme} />} />
+        <Route path="/topics/oops" element={<OOPS theme={theme} />} />
+        <Route path="/topics/2d-arrays" element={<TwoDArrays theme={theme} />} />
+        <Route path="/topics/queues" element={<Queues theme={theme} />} />
+        <Route path="/topics/hashtables" element={<Hash theme={theme} />} />
+        <Route path="/topics/ObjectOrientedProgramming" element={<OOPS theme={theme} />} />
+        <Route path="/topics/time-complexity" element={<Time theme={theme} />} />
+        <Route path="/topics/maximum-flow" element={<MF theme={theme} />} />
 
-        <Route path="/blog" element={<Blog />} />
+        <Route path="/blog" element={<Blog theme={theme} />} />
       </Routes>
 
       <Chatbot ref={chatbotRef} />

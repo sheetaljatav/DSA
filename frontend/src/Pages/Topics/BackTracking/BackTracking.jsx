@@ -19,7 +19,7 @@ const BackTracking = () => {
         <ul>
           <li><b>Choose:</b> Pick a possible option.</li>
           <li><b>Explore:</b> Go deeper with that choice.</li>
-          <li><b>Un-choose (Backtrack):</b> If it doesn’t lead to a solution, undo the choice and try another.</li>
+          <li><b>Un-choose (Backtrack):</b> If it doesn't lead to a solution, undo the choice and try another.</li>
         </ul>
         <p>
           Backtracking is often used when:
@@ -38,7 +38,7 @@ const BackTracking = () => {
           <li>Permutations &amp; Combinations</li>
           <li>Rat in a Maze</li>
           <li>Word Search</li>
-          <li>Knight’s Tour</li>
+          <li>Knight's Tour</li>
         </ul>
 
         <h3>⚙️ Backtracking vs Brute Force</h3>
